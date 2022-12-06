@@ -1,10 +1,12 @@
 #include <stdio.h>
 int main() {
-    int userInput, i;
-    printf("Input : ");
-    scanf("%d", &userInput);
-    for (i = 1; i <= 12; i++) {
-        printf("%d x %d = %d\n", userInput, i, (userInput * i));
+    int number, multiply, i;
+    printf("Input the number : ");
+    scanf("%d", &number);
+    printf("Input the multiply : ");
+    scanf("%d", &multiply);
+    for (i = 1; i <= multiply; i++) {
+        printf("%d x %d = %d\n", number, i, (number * i));
     }
     return 0;
 }
