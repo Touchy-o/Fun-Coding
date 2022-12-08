@@ -15,6 +15,9 @@ int main() {
         for (y = 1; y <= x; y++) {
             printf("%d", y);
         }
+        for (y = 1; y < x; y++) {
+            printf("%d", (x - y));
+        }
         printf("\n");
     }
 }
