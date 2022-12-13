@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main() {
-    int framesize, x, y;
+    int x, y, framesize;
     printf("Input frame size : ");
     scanf("%d", &framesize);
     for (y = 0; y < framesize; y++) {

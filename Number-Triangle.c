@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main() {
     int diamondsize, x, y;
-    printf("Input diamond size : ");
+    printf("Input triangle size : ");
     scanf("%d", &diamondsize);
     for (x = 1; x <= diamondsize; x++) {
         for (y = 1; y <= diamondsize - x; y++) {
@@ -12,18 +12,6 @@ int main() {
         }
         for (y = 1; y < x; y++) {
             printf("%d", (x - y));
-        }
-        printf("\n");
-    }
-    for (x = 1; x <= diamondsize; x++) {
-        for (y = 1; y <= x; y++) {
-            printf(" ");
-        }
-        for (y = 1; y < (diamondsize - x); y++) {
-            printf("%d", y);
-        }
-        for (y = (diamondsize - x); y > 0; y--) {
-            printf("%d", y);
         }
         printf("\n");
     }
