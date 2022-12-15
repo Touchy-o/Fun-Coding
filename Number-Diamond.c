@@ -1,31 +1,42 @@
 #include <stdio.h>
+
+void printDiamond(int size);
+void printTriangle(int size);
+void printRow(int size, int row);
+
 int main() {
-    int diamondsize, x, y;
-    printf("Input diamond size : ");
-    scanf("%d", &diamondsize);
-    for (x = 1; x <= diamondsize; x++) {
-        for (y = 1; y <= diamondsize - x; y++) {
-            printf(" ");
-        }
-        for (y = 1; y <= x; y++) {
-            printf("%d", y);
-        }
-        for (y = 1; y < x; y++) {
-            printf("%d", (x - y));
-        }
-        printf("\n");
-    }
-    for (x = 1; x <= diamondsize; x++) {
-        for (y = 1; y <= x; y++) {
-            printf(" ");
-        }
-        for (y = 1; y < (diamondsize - x); y++) {
-            printf("%d", y);
-        }
-        for (y = (diamondsize - x); y > 0; y--) {
-            printf("%d", y);
-        }
-        printf("\n");
-    }
+    int diamondSize;
+    printf("Input diamond size: ");
+    scanf("%d", &diamondSize);
+
+    printDiamond(diamondSize);
+
     return 0;
+}
+
+void printDiamond(int size) {
+    printTriangle(size);
+
+    for (int row = 1; row < size; row++) {
+        printRow(size, row);
+    }
+}
+
+void printTriangle(int size) {
+    for (int row = 1; row <= size; row++) {
+        printRow(size, row);
+    }
+}
+
+void printRow(int size, int row) {
+    for (int i = 1; i <= size - row; i++) {
+        printf(" ");
+    }
+    for (int i = 1; i <= row; i++) {
+        printf("%d", i);
+    }
+    for (int i = 1; i < row; i++) {
+        printf("%d", (row - i));
+    }
+    printf("\n");
 }

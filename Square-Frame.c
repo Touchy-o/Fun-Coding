@@ -1,11 +1,21 @@
 #include <stdio.h>
+
+void printFrame(int size);
+
 int main() {
-    int x, y, framesize;
-    printf("Input frame size : ");
-    scanf("%d", &framesize);
-    for (y = 0; y < framesize; y++) {
-        for (x = 0; x < framesize; x++) { 
-            if (y == 0 || x == 0 || y == framesize - 1 || x == framesize - 1) {
+    int frameSize;
+    printf("Input frame size: ");
+    scanf("%d", &frameSize);
+
+    printFrame(frameSize);
+
+    return 0;
+}
+
+void printFrame(int size) {
+    for (int y = 0; y < size; y++) {
+        for (int x = 0; x < size; x++) {
+            if (y == 0 || x == 0 || y == size - 1 || x == size - 1) {
                 printf("X");
             } else {
                 printf(" ");
@@ -13,5 +23,4 @@ int main() {
         }
         printf("\n");
     }
-    return 0;
 }

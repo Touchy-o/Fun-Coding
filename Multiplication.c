@@ -1,12 +1,21 @@
 #include <stdio.h>
+
+void printTable(int number, int multiply);
+
 int main() {
-    int number, multiply, i;
-    printf("Input the number : ");
+    int number, multiply;
+    printf("Input the number: ");
     scanf("%d", &number);
-    printf("Input the multiply : ");
+    printf("Input the multiply: ");
     scanf("%d", &multiply);
-    for (i = 1; i <= multiply; i++) {
+
+    printTable(number, multiply);
+
+    return 0;
+}
+
+void printTable(int number, int multiply) {
+    for (int i = 1; i <= multiply; i++) {
         printf("%d x %d = %d\n", number, i, (number * i));
     }
-    return 0;
 }
