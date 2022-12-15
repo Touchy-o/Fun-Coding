@@ -5,6 +5,7 @@ void printRow(int size, int row);
 
 int main() {
     int triangleSize;
+    
     printf("Input triangle size: ");
     scanf("%d", &triangleSize);
 
@@ -23,9 +24,11 @@ void printRow(int size, int row) {
     for (int i = 1; i <= size - row; i++) {
         printf(" ");
     }
+
     for (int i = 1; i <= row; i++) {
         printf("%d", i);
     }
+    
     for (int i = 1; i < row; i++) {
         printf("%d", (row - i));
     }

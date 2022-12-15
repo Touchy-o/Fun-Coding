@@ -4,6 +4,7 @@ void printFrame(int size);
 
 int main() {
     int frameSize;
+    
     printf("Input frame size: ");
     scanf("%d", &frameSize);
 

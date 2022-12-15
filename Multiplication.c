@@ -4,6 +4,7 @@ void printTable(int number, int multiply);
 
 int main() {
     int number, multiply;
+    
     printf("Input the number: ");
     scanf("%d", &number);
     printf("Input the multiply: ");
